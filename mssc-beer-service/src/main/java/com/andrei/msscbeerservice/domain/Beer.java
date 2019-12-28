@@ -4,8 +4,10 @@ import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.UpdateTimestamp;
+import org.hibernate.validator.constraints.CreditCardNumber;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.UUID;
@@ -29,6 +31,7 @@ public class Beer {
 
     @CreationTimestamp
     @Column(updatable = false)
+    @CreditCardNumber
     private Timestamp createdDate;
 
     @UpdateTimestamp
