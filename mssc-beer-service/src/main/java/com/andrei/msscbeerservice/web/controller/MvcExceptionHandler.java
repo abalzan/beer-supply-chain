@@ -2,6 +2,7 @@ package com.andrei.msscbeerservice.web.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -14,8 +15,13 @@ import java.util.stream.Collectors;
 public class MvcExceptionHandler {
 
     @ExceptionHandler(ConstraintViolationException.class)
-    public ResponseEntity<List> errorHandlerConstraintValidation(ConstraintViolationException ex){
+    public ResponseEntity<List> errorHandlerConstraintValidation(ConstraintViolationException ex) {
         final var errorList = ex.getConstraintViolations().stream().map(ConstraintViolation::toString).collect(Collectors.toList());
-        return new ResponseEntity<>(errorList, HttpStatus.BAD_GATEWAY);
+        return new ResponseEntity<>(errorList, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(BindException.class)
+    public ResponseEntity<List> errorHandlerBindException(BindException e) {
+        return new ResponseEntity<>(e.getAllErrors(), HttpStatus.BAD_REQUEST);
     }
 }

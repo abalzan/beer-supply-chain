@@ -6,7 +6,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.constraints.NotNull;
 import java.util.UUID;
 
 @RestController
@@ -20,7 +19,7 @@ public class BeerController {
     }
 
     @PostMapping
-    public  ResponseEntity saveNewBeer(@RequestBody @Validated @NotNull BeerDto beerDto) {
+    public ResponseEntity saveNewBeer(@RequestBody @Validated BeerDto beerDto) {
         return new ResponseEntity(HttpStatus.CREATED);
     }
 
