@@ -23,24 +23,10 @@ jobs:
     steps:
       - checkout
 
-      # Download and cache dependencies
-      # - restore_cache:
-      #     keys:
-      #       - v1-dependencies-{{ checksum "pom.xml" }}
-            # fallback to using the latest cache if no exact match is found
-      #       - v1-dependencies-
-
       - run:
           name: mssc-beer-service
           command: mvn install
           working_directory: mssc-beer-service
       - store_artifacts:
           path: mssc-beer-service/target
-          
-      # - save_cache:
-      #     paths:
-      #       - ~/.m2
-      #     key: v1-dependencies-{{ checksum "pom.xml" }}
-
-      # run tests!
-      - run: mvn integration-test
+         
