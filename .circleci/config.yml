@@ -34,9 +34,9 @@ jobs:
           name: mssc-beer-service
           command: mvn install
           working_directory: mssc-beer-service
-                               - store_artifacts:
-                               path: mssc-beer-service/target
-
+      - store_artifacts:
+          path: mssc-beer-service/target
+          
       - save_cache:
           paths:
             - ~/.m2
