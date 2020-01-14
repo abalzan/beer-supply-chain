@@ -1,13 +1,13 @@
-package com.andrei.msscbeerservice;
+package com.andrei.beerservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MsscBeerServiceApplication {
+public class BeerInventoryApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MsscBeerServiceApplication.class, args);
+        SpringApplication.run(BeerInventoryApplication.class, args);
     }
 
 }
