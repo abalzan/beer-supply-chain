@@ -1,6 +1,6 @@
-package com.andrei.msscbeerservice.repository;
+package com.andrei.beer.service.repository;
 
-import com.andrei.msscbeerservice.domain.Beer;
+import com.andrei.beer.service.domain.Beer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.UUID;

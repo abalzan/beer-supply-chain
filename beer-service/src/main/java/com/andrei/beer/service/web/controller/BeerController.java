@@ -1,6 +1,6 @@
-package com.andrei.msscbeerservice.web.controller;
+package com.andrei.beer.service.web.controller;
 
-import com.andrei.msscbeerservice.web.model.BeerDto;
+import com.andrei.beer.service.web.model.BeerDto;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;

@@ -1,4 +1,4 @@
-package com.andrei.msscbeerservice.web.model;
+package com.andrei.beer.service.web.model;
 
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;

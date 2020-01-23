@@ -1,4 +1,4 @@
-package com.andrei.msscbeerservice.web.controller;
+package com.andrei.beer.service.web.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

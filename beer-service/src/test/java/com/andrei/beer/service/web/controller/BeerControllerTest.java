@@ -1,7 +1,7 @@
-package com.andrei.msscbeerservice.web.controller;
+package com.andrei.beer.service.web.controller;
 
-import com.andrei.msscbeerservice.web.model.BeerDto;
-import com.andrei.msscbeerservice.web.model.BeerStyleEnum;
+import com.andrei.beer.service.web.model.BeerDto;
+import com.andrei.beer.service.web.model.BeerStyleEnum;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
