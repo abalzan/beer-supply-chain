@@ -8,6 +8,7 @@ import com.andrei.beerservice.web.model.BeerDto;
 import com.andrei.beerservice.web.model.BeerPageList;
 import com.andrei.beerservice.web.model.BeerStyleEnum;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
@@ -23,7 +24,7 @@ public class BeerServiceImpl implements BeerService {
     private final BeerRepository beerRepository;
     private final BeerMapper mapper;
 
-
+    @Cacheable(cacheNames = "beerListCache", condition = "#showInventoryOnHand==false")
     @Override
     public BeerPageList listBeers(String beerName, BeerStyleEnum beerStyle, PageRequest pageRequest, boolean showInventoryOnHand) {
         BeerPageList beerPageList;
@@ -61,10 +62,11 @@ public class BeerServiceImpl implements BeerService {
                     beerPage.getTotalElements());
         }
 
-
         return beerPageList;
     }
 
+
+    @Cacheable(cacheNames = "beerCache", key = "#beerId", condition = "#showInventoryOnHand==false")
     @Override
     public BeerDto getById(UUID beerId, boolean showInventoryOnHand) {
         if (showInventoryOnHand) {
