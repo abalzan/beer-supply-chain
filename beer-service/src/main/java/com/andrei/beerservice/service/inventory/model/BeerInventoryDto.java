@@ -1,4 +1,4 @@
-package com.andrei.beer.service.service.inventory.model;
+package com.andrei.beerservice.service.inventory.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

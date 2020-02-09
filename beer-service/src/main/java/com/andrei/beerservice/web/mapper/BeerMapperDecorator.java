@@ -1,8 +1,8 @@
-package com.andrei.beer.service.web.mapper;
+package com.andrei.beerservice.web.mapper;
 
-import com.andrei.beer.service.domain.Beer;
-import com.andrei.beer.service.service.inventory.BeerInventoryService;
-import com.andrei.beer.service.web.model.BeerDto;
+import com.andrei.beerservice.domain.Beer;
+import com.andrei.beerservice.service.inventory.BeerInventoryService;
+import com.andrei.beerservice.web.model.BeerDto;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public abstract class BeerMapperDecorator implements BeerMapper {
@@ -22,6 +22,11 @@ public abstract class BeerMapperDecorator implements BeerMapper {
 
     @Override
     public BeerDto beerToBeerDto(Beer beer) {
+        return mapper.beerToBeerDto(beer);
+    }
+
+    @Override
+    public BeerDto beerToBeerDtoWithInventory(Beer beer) {
         BeerDto beerDto = mapper.beerToBeerDto(beer);
         beerDto.setQuantityOnHand(beerInventoryService.getOnHandInventory(beer.getId()));
         return beerDto;

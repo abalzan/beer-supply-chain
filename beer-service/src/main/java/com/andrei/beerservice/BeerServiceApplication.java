@@ -1,4 +1,4 @@
-package com.andrei.beer.service;
+package com.andrei.beerservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

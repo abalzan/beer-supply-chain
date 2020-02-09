@@ -1,7 +1,7 @@
-package com.andrei.beer.service.web.mapper;
+package com.andrei.beerservice.web.mapper;
 
-import com.andrei.beer.service.domain.Beer;
-import com.andrei.beer.service.web.model.BeerDto;
+import com.andrei.beerservice.domain.Beer;
+import com.andrei.beerservice.web.model.BeerDto;
 import org.mapstruct.DecoratedWith;
 import org.mapstruct.Mapper;
 
@@ -10,6 +10,8 @@ import org.mapstruct.Mapper;
 public interface BeerMapper {
 
     BeerDto beerToBeerDto(Beer beer);
+
+    BeerDto beerToBeerDtoWithInventory(Beer beer);
 
     Beer beerDtoToBeer(BeerDto beerDto);
 }

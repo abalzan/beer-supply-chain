@@ -1,4 +1,4 @@
-package com.andrei.beer.service.service.inventory;
+package com.andrei.beerservice.service.inventory;
 
 import java.util.UUID;
 
