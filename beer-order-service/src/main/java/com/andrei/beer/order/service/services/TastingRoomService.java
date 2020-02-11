@@ -50,7 +50,7 @@ public class TastingRoomService {
     }
 
     private void doPlaceOrder(Customer customer) {
-        String beerToOrder = getRandomBeerUpc();
+        Long beerToOrder = getRandomBeerUpc();
 
         BeerOrderLineDto beerOrderLine = BeerOrderLineDto.builder()
                 .upc(beerToOrder)
@@ -70,7 +70,7 @@ public class TastingRoomService {
 
     }
 
-    private String getRandomBeerUpc() {
-        return beerUpcs.get(new Random().nextInt(beerUpcs.size() - 0));
+    private Long getRandomBeerUpc() {
+        return Long.parseLong(beerUpcs.get(new Random().nextInt(beerUpcs.size() - 0)));
     }
 }
