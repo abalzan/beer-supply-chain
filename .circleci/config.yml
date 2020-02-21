@@ -24,9 +24,27 @@ jobs:
       - checkout
 
       - run:
-          name: mssc-beer-service
+          name: beer-bom
           command: mvn install
-          working_directory: mssc-beer-service
+          working_directory: beer-bom
       - store_artifacts:
-          path: mssc-beer-service/target
-         
+          path: beer-bom/target
+      - run:
+          name: beer-service
+          command: mvn install
+          working_directory: beer-service
+      - store_artifacts:
+          path: beer-service/target
+      - run:
+          name: beer-inventory-service
+          command: mvn install
+          working_directory: beer-inventory-service
+      - store_artifacts:
+          path: beer-inventory-service/target
+      - run:
+          name: beer-order-service
+          command: mvn install
+          working_directory: beer-order-service
+      - store_artifacts:
+          path: beer-order-service/target
+        
