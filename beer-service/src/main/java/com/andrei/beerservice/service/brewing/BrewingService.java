@@ -1,4 +1,4 @@
-package com.andrei.beerservice.service;
+package com.andrei.beerservice.service.brewing;
 
 import com.andrei.beerservice.config.JmsConfig;
 import com.andrei.beerservice.domain.Beer;

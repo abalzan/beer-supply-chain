@@ -2,9 +2,9 @@ package com.andrei.beerservice.events;
 
 import com.andrei.beerservice.web.model.BeerDto;
 
-public class InventoryEvent extends BeerEvent {
+public class NewInventoryEvent extends BeerEvent {
 
-    InventoryEvent(BeerDto beerDto) {
+    public NewInventoryEvent(BeerDto beerDto) {
         super(beerDto);
     }
 }
