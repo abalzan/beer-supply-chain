@@ -1,4 +1,4 @@
-package com.andrei.beerservice.events;
+package com.andrei.common.events;
 
 import com.andrei.beerservice.web.model.BeerDto;
 import lombok.NoArgsConstructor;

@@ -2,10 +2,10 @@ package com.andrei.beerservice.service.brewing;
 
 import com.andrei.beerservice.config.JmsConfig;
 import com.andrei.beerservice.domain.Beer;
-import com.andrei.beerservice.events.BrewBeerEvent;
 import com.andrei.beerservice.repository.BeerRepository;
 import com.andrei.beerservice.service.inventory.BeerInventoryService;
 import com.andrei.beerservice.web.mapper.BeerMapper;
+import com.andrei.common.events.BrewBeerEvent;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jms.core.JmsTemplate;
