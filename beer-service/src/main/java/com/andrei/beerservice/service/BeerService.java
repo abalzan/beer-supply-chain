@@ -1,8 +1,8 @@
 package com.andrei.beerservice.service;
 
-import com.andrei.beerservice.web.model.BeerDto;
-import com.andrei.beerservice.web.model.BeerPageList;
-import com.andrei.beerservice.web.model.BeerStyleEnum;
+import com.andrei.brewery.model.BeerDto;
+import com.andrei.brewery.model.BeerPageList;
+import com.andrei.brewery.model.BeerStyleEnum;
 import org.springframework.data.domain.PageRequest;
 
 import java.util.UUID;

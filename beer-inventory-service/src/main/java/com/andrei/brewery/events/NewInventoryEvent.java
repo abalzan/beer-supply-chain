@@ -1,6 +1,5 @@
-package com.andrei.common.events;
+package com.andrei.brewery.events;
 
-import com.andrei.beerservice.web.model.BeerDto;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor

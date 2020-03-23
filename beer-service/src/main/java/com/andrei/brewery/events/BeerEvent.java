@@ -1,6 +1,6 @@
-package com.andrei.common.events;
+package com.andrei.brewery.events;
 
-import com.andrei.beerservice.web.model.BeerDto;
+import com.andrei.brewery.model.BeerDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

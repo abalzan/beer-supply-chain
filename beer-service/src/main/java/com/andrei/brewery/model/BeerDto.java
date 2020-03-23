@@ -1,4 +1,4 @@
-package com.andrei.common.events;
+package com.andrei.brewery.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -38,7 +38,7 @@ public class BeerDto implements Serializable {
     private String beerName;
 
     @NotNull
-    private String styleEnum;
+    private BeerStyleEnum styleEnum;
 
     @NotNull
     private String upc;
