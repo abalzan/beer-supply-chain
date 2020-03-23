@@ -1,8 +1,8 @@
 package com.andrei.beer.order.service.services;
 
 
-import com.andrei.beer.order.service.web.model.BeerOrderDto;
-import com.andrei.beer.order.service.web.model.BeerOrderPagedList;
+import com.andrei.brewery.model.BeerOrderDto;
+import com.andrei.brewery.model.BeerOrderPagedList;
 import org.springframework.data.domain.Pageable;
 
 import java.util.UUID;

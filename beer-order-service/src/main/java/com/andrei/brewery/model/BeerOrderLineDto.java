@@ -1,20 +1,22 @@
-package com.andrei.beer.order.service.web.model;
+package com.andrei.brewery.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class BaseItem {
+@Builder
+public class BeerOrderLineDto {
+
     @JsonProperty("id")
     private UUID id = null;
 
@@ -28,5 +30,11 @@ public class BaseItem {
     @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ssZ", shape = JsonFormat.Shape.STRING)
     @JsonProperty("lastModifiedDate")
     private OffsetDateTime lastModifiedDate = null;
-}
 
+    private Long upc;
+    private String beerName;
+    private String beerStyle;
+    private UUID beerId;
+    private Integer orderQuantity = 0;
+    private BigDecimal price;
+}
