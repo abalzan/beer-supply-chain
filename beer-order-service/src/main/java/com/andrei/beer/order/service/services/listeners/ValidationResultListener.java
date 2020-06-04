@@ -15,7 +15,7 @@ import java.util.UUID;
 @Component
 public class ValidationResultListener {
 
-    private BeerOrderManager beerOrderManager;
+    private final BeerOrderManager beerOrderManager;
 
     @JmsListener(destination = JmsConfig.VALIDATE_ORDER_RESPONSE_QUEUE)
     public void listen(ValidateOrderResult validateOrderResult) {

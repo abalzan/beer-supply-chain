@@ -57,7 +57,6 @@ public class BeerOrderManagementImplIT {
 
     @TestConfiguration
     static class RestTemplateBuilderProvider {
-        //when the test finishes the bean will be shut down
         @Bean(destroyMethod = "stop")
         public WireMockServer wireMockServer() {
             WireMockServer server = with(wireMockConfig().port(8083));
