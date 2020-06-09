@@ -4,4 +4,6 @@ import com.andrei.brewery.model.BeerOrderDto;
 
 public interface AllocationService {
     Boolean allocatedOrder(BeerOrderDto beerOrderDto);
+
+    void deallocateOrder(BeerOrderDto beerOrderDto);
 }
