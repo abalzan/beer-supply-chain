@@ -29,7 +29,7 @@ public class BeerServiceImpl implements BeerService {
     }
 
     @Override
-    public Optional<BeerDto> getBeerByUpc(Long upc) {
+    public Optional<BeerDto> getBeerByUpc(String upc) {
         return Optional.of(restTemplate.getForObject(beerServiceHost + BEER_UPC_PATH_V1 + upc, BeerDto.class));
     }
 

@@ -31,7 +31,7 @@ public class BeerOrderLineDto {
     @JsonProperty("lastModifiedDate")
     private OffsetDateTime lastModifiedDate = null;
 
-    private Long upc;
+    private String upc;
     private String beerName;
     private String beerStyle;
     private UUID beerId;

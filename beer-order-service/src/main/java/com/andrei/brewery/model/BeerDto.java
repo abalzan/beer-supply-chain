@@ -30,7 +30,7 @@ public class BeerDto implements Serializable {
 
     private String beerName;
     private String beerStyle;
-    private Long upc;
+    private String upc;
     private Integer quantityOnHand;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING)

@@ -9,5 +9,5 @@ public interface BeerService {
 
     Optional<BeerDto> getBeerById(UUID beerId);
 
-    Optional<BeerDto> getBeerByUpc(Long upc);
+    Optional<BeerDto> getBeerByUpc(String upc);
 }
