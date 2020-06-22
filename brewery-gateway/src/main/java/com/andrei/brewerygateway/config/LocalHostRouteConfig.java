@@ -15,6 +15,10 @@ public class LocalHostRouteConfig {
                 .route(predicateSpec -> predicateSpec.path("/api/v1/beer*", "/api/v1/beer/*", "/api/v1/beerUpc/*")
                         .uri("http://localhost:8080")
                         .id("beer-service"))
+                .route(predicateSpec -> predicateSpec.path("/api/v1/customers/**")
+                        .uri("http://localhost:8081")
+                        .id("order-service"))
+
                 .build();
     }
 }

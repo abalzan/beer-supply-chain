@@ -19,7 +19,7 @@ public class CustomerController {
 
     private final CustomerService customerService;
 
-    @GetMapping("orders")
+    @GetMapping
     public CustomerPagedList listCustomers(@RequestParam(value = "pageNumber", required = false) Integer pageNumber,
                                            @RequestParam(value = "pageSize", required = false) Integer pageSize) {
 
