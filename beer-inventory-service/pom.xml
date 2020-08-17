@@ -19,6 +19,10 @@
     <name>beer-inventory-service</name>
     <description>Demo project for Spring Boot</description>
 
+    <properties>
+        <!--set this to your docker acct name-->
+        <docker.image.prefix>neninho</docker.image.prefix>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
