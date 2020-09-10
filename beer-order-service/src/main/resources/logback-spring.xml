@@ -87,3 +87,4 @@
     <root level="INFO">
         <appender-ref ref="jsonConsole"/>
     </root>
+</configuration>

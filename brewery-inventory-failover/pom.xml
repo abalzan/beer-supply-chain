@@ -13,6 +13,13 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>brewery-inventory-failover</name>
     <description>Demo project for Spring Boot</description>
+         
+    <properties>
+        <!--set this to your docker acct name-->
+        <docker.image.prefix>neninho</docker.image.prefix>
+        <!--Set to name of project-->
+        <docker.image.name>${project.artifactId}</docker.image.name>
+    </properties>
 
     <properties>
         <!--set this to your docker acct name-->
