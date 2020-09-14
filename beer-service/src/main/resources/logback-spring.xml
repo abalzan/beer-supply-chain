@@ -38,18 +38,18 @@
                         <exclude>^sun\.net\.</exclude>
                         <!-- dynamic invocation -->
                         <exclude>^net\.sf\.cglib\.proxy\.MethodProxy\.invoke</exclude>
-                        <exclude>^org\.springframework\.cglib\.</exclude>
-                        <exclude>^org\.springframework\.transaction\.</exclude>
-                        <exclude>^org\.springframework\.validation\.</exclude>
-                        <exclude>^org\.springframework\.app\.</exclude>
-                        <exclude>^org\.springframework\.aop\.</exclude>
+                        <exclude>^com\.andrei\.cglib\.</exclude>
+                        <exclude>^com\.andrei\.transaction\.</exclude>
+                        <exclude>^com\.andrei\.validation\.</exclude>
+                        <exclude>^com\.andrei\.app\.</exclude>
+                        <exclude>^com\.andrei\.aop\.</exclude>
                         <exclude>^java\.lang\.reflect\.Method\.invoke</exclude>
                         <!-- Spring plumbing -->
-                        <exclude>^org\.springframework\.ws\..*\.invoke</exclude>
-                        <exclude>^org\.springframework\.ws\.transport\.</exclude>
-                        <exclude>^org\.springframework\.ws\.soap\.saaj\.SaajSoapMessage\.</exclude>
-                        <exclude>^org\.springframework\.ws\.client\.core\.WebServiceTemplate\.</exclude>
-                        <exclude>^org\.springframework\.web\.filter\.</exclude>
+                        <exclude>^com\.andrei\.ws\..*\.invoke</exclude>
+                        <exclude>^com\.andrei\.ws\.transport\.</exclude>
+                        <exclude>^com\.andrei\.ws\.soap\.saaj\.SaajSoapMessage\.</exclude>
+                        <exclude>^com\.andrei\.ws\.client\.core\.WebServiceTemplate\.</exclude>
+                        <exclude>^com\.andrei\.web\.filter\.</exclude>
                         <!-- Tomcat internals -->
                         <exclude>^org\.apache\.tomcat\.</exclude>
                         <exclude>^org\.apache\.catalina\.</exclude>
